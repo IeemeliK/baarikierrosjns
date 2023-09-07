@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --dark-scheme-bg: #222;
+  --white-scheme-bg: #f8f8f8;
+
+  --white-scheme-text: #051320;
+  --dark-scheme-text: #ffffffb4;
+}
+
+:root {
+  --color-background: var(--white-scheme-bg);
+  --color-text: var(--white-scheme-text);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--dark-scheme-bg);
+    --color-text: var(--dark-scheme-text);
+  }
+}
+
+body {
+  color: var(--color-text);
+  background: var(--color-background);
+}
