@@ -1,7 +1,10 @@
 <script lang="ts">
+	import type { PageData } from './$types';
 	import { onMount } from 'svelte';
 	import MapScript from '$lib/Mapscript.svelte';
 	import mapStyles from '$lib/map-styles';
+
+	export let data: PageData;
 
 	let container: HTMLElement;
 	let map: google.maps.Map;
@@ -16,6 +19,7 @@
 		const { Map } = (await google.maps.importLibrary('maps')) as google.maps.MapsLibrary;
 		map = new Map(container, mapOptions);
 	});
+	console.log(data.placeData);
 </script>
 
 <MapScript />

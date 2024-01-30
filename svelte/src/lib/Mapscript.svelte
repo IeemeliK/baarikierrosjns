@@ -1,7 +1,7 @@
 <script>
 	// @ts-nocheck
 	import { onMount } from 'svelte';
-	import { PUBLIC_MAPS_API_KEY } from '$env/static/public';
+	import { PUBLIC_GOOGLE_API } from '$env/static/public';
 
 	function loadGoogleMapsAPI(g) {
 		var h,
@@ -41,7 +41,7 @@
 
 	onMount(() => {
 		loadGoogleMapsAPI({
-			key: PUBLIC_MAPS_API_KEY,
+			key: PUBLIC_GOOGLE_API,
 			v: 'weekly'
 			// Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
 			// Add other bootstrap parameters as needed, using camel case.
